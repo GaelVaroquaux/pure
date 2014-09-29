@@ -132,12 +132,14 @@ pre {
     float: right;
     margin-bottom: 35px;
 }
-    hr {
-        border: 1px solid #f2f2f0;
-        width: 10%;
-        margin-top: 20px;
-        margin-right: 0px;
-    }
+
+hr {
+    border: 1px solid #f2f2f0;
+    /*width: 10%;*/
+    margin-top: 20px;
+    margin-right: 0px;
+    clear: both;
+}
 
 .header-article {
     width: 767px;
@@ -416,3 +418,110 @@ pre {
         background-position: 0;
     }
 }
+
+/*---- Page elements for restructured text--------------------------------*/
+
+div.content img {
+    margin-left: 5%;
+}
+
+div.content img.align-center {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+div.content img.align-right {
+    float: right;
+}
+
+div.content img.align-left {
+    float: left;
+    margin-left: 0%;
+}
+
+div.align-right {
+    float: right;
+}
+
+div.align-left {
+    float: left;
+}
+
+div.topic, div.admonition, div.note {
+    border-width : 0 0 1px 0 ;
+    border-style: solid ;
+    border-color: #777;
+    margin: 1em 2em 2em 2em ;
+}
+
+div.topic p {
+    margin: 1px 1em 1px 1em ;
+    font-size: smaller ;
+}
+
+div.topic p.topic-title {
+    font-size: larger ;
+    font-weight : 600 ;
+    border-width : 0 0 1px 0 ;
+    border-style: solid;
+    margin: 0 0 2px 0 ;
+    border-color: #777;
+}
+
+p.admonition-title {
+    border-width : 0 0 1px 0 ;
+    border-style: solid;
+    margin: 0 0 2px 0 ;
+    border-color: #777;
+}
+
+div.note p.admonition-title {
+    color: white ;
+    font-size: xx-small;
+}
+
+blockquote.epigraph {
+/*    font-size: smaller ;*/
+    font-family: sans-serif ;
+    font-weight : 500 ;
+    font-style: oblique;
+    padding : 0.5ex 2ex 0.5ex 5ex ;
+    margin: 2px 1ex 2px 1ex ; 
+    background-color: white ;
+    border: solid #e3e3e3 ;
+    border-width : 2px 0px 2px 0px;
+    background-image: url("http://gael-varoquaux.info/images/quotes.png");
+    background-repeat: no-repeat;
+    /*background-position:  right;*/
+}
+
+blockquote.highlights {
+    font-size: smaller ;
+    font-family: sans-serif ;
+    font-weight : 600 ;
+    border : solid #CCCCCC;
+    border-width : 0 0 0 10px ;
+    padding : 0 0 0 1ex ;
+}
+
+/* docutils errors */
+.system-message {
+    background-color: #F99;
+}
+
+/* Small images, titles... in previews */
+.post-header img {
+    max-width: 100px ;
+    max-height: 150px ;
+    float: right ;
+}
+
+.post-header h2 {
+    font-size: large;
+}
+
+header.post-header {
+    clear: both;
+}
+

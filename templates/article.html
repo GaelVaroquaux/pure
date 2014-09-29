@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block title %}{{ article.title|striptags }} // {{ super() }}{% endblock title %}
+{% block title %}{{ article.title|striptags }} -- {{ super() }}{% endblock title %}
 
 {% block head_css %}
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygments.css">
@@ -19,7 +19,7 @@
     <div class="sidebar sidebar-article pure-u">
         <header class="header-article">
             <hgroup>
-                <a href="{{ SITEURL }}}}">
+                <a href="{{ SITEURL }}">
 		    <img class="avatar" alt="Gaël Varoquaux" src="http://gael-varoquaux.info/images/gael.png">
                 </a>
                 <a href="{{ SITEURL }}">
@@ -36,7 +36,7 @@
                 <header class="post-header">
                     <h1>{{ article.title }}</h1>
                         <p class="post-meta">
-                            // under {% for tag in article.tags %}
+                            under {% for tag in article.tags %}
                                 <a class="post-category" href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
                             {% endfor %}
                         </p>
