@@ -60,6 +60,11 @@ pre {
     div.sidebar div.cover-img {
 	background-position-x: right;
     }
+
+    .header-article {
+	padding-top: 4em;
+    }
+
 }
 
 .cover-body {
@@ -138,7 +143,6 @@ pre {
     width: 767px;
     max-width: 100%;
     text-align: right;
-    padding-top: 4em;
 }
 
 .header-article h5 {
@@ -362,8 +366,10 @@ pre {
     }
 
     .avatar {
-        width: 45px;
-        height: 45px;
+        width: 65px;
+        height: 65px;
+	position: absolute;
+	right: 10px;
     }
 
     .article-avatar {

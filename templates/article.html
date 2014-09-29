@@ -19,14 +19,12 @@
     <div class="sidebar sidebar-article pure-u">
         <header class="header-article">
             <hgroup>
-                <a href="{{ SITEURL }}/{{ article.author.url }}" title="See posts by {{ article.author }}">
-                    {% if article.author_gravatar %}
-                        <img class="avatar" alt="{{ article.author }}" src="{{ article.author_gravatar }}">
-                    {% endif %}
+                <a href="{{ SITEURL }}}}">
+		    <img class="avatar" alt="Gaël Varoquaux" src="http://gael-varoquaux.info/images/gael.png">
                 </a>
-                <h2 class="article-info">{{ article.author }}</h2>
-                <small class="about-author">{{ article.about_author }}</small>
-                <h5>Published</h5>
+                <a href="{{ SITEURL }}">
+		    <h2 class="article-info">{{ article.author }}</h2>
+		</a>
                 <p>{{ article.locale_date }}</p>
                 <a href="/">&larr;Home</a>
             </hgroup>
