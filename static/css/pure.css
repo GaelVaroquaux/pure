@@ -56,6 +56,12 @@ pre {
     box-shadow: inset -1px 0 0 rgba(0,0,0,0.3);
 }
 
+@media (min-width: 767px) {
+div.sidebar div.cover-img {
+    background-position-x: right;
+}
+}
+
 .cover-body {
     position: absolute;
     bottom: 0;
@@ -127,7 +133,6 @@ pre {
 }
 
 .brand-main a {
-    text-transform: uppercase;
     text-decoration: none;
     margin-left: 15px;
     font-size: 25px;
