@@ -1,5 +1,10 @@
 <div class="sidebar pure-u">
     <div class="cover-img" style="background-image: url('{{ COVER_IMG_URL }}')">
+        <div class="cover-profile"> 
+	    <a href="{{ SITEURL }}">
+		<img src="{{ PROFILE_IMAGE_URL }}">
+	    </a>
+	</div>
         <div class="cover-body">
             <header class="header">
                 <hgroup>
@@ -9,9 +14,9 @@
                     <p class="links"><a href="{{ SITEURL }}/{{ link }}">{{ title }}</a></p>
                 {% endfor %}
                     <p class="social">
-                {% for title, link in SOCIAL %}
-                        <a href="{{ link }}">
-                            <i class="fa fa-{{ title }} fa-3x"></i>
+                {% for title, image, link in SOCIAL %}
+                        <a href="{{ link }}" tooltip="{{ title }}">
+                            <i class="fa fa-{{ image }} fa-3x"></i>
                         </a>
                 {% endfor %}
                     <p>

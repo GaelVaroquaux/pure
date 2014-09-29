@@ -57,9 +57,9 @@ pre {
 }
 
 @media (min-width: 767px) {
-div.sidebar div.cover-img {
-    background-position-x: right;
-}
+    div.sidebar div.cover-img {
+	background-position-x: right;
+    }
 }
 
 .cover-body {
@@ -69,6 +69,25 @@ div.sidebar div.cover-img {
     padding-bottom: 0;
     padding-top: 100px;
     background-image: linear-gradient(to top,rgba(0,0,0,0.5) 0,rgba(0,0,0,0.3) 70%,rgba(0,0,0,0) 100%);
+}
+
+.cover-profile {
+    width: 100px;
+    height: 100px;
+    margin-left: 30%;
+    margin-right: auto;
+    margin-top: 10%;
+    border: 2px solid #111;
+    border-radius: 50%;
+    background: #FFF;
+    background-image: none;
+    overflow: hidden;
+    text-align: center;
+}
+
+.cover-profile img {
+    margin-top: 5%;
+    width: 85%;
 }
 
 .brand-title,
@@ -159,6 +178,27 @@ div.sidebar div.cover-img {
     margin-left: 15px;
     text-shadow: 0 1px 3px rgba(0,0,0,0.3);
     color: #fff;
+}
+
+*[tooltip] {
+    position: relative;
+    float: left;
+}
+
+*[tooltip]:hover:before{
+    background: rgba(0,0,0,.8);
+    border-radius: 5px;
+    color: white;
+    content: attr(tooltip);
+    left: 50%;
+    padding: 5px 15px;
+    position: absolute;
+    z-index: 98;
+    width: 50px;
+    margin-left: -40px; /* .5*width + padding */
+    bottom: 100%;
+    display: inline-block;
+    text-align: center;
 }
 
 .links a {
@@ -337,6 +377,13 @@ div.sidebar div.cover-img {
     .cover-body {
         padding-bottom: 5%;
         padding-top: 0;
+    }
+
+    .cover-profile {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	margin-top: 0px;
     }
 
     .header,
