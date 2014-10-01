@@ -108,7 +108,6 @@ h1.brand-main {
     margin-top: -1em;
 }
 
-
 .article-info {
     padding-top: 15px;
     clear: right;
@@ -184,6 +183,7 @@ hr {
 
 .social {
     display: inline-block;
+    margin-top: 5px;
 }
 .social a {
     text-decoration: none;
@@ -194,13 +194,13 @@ hr {
 
 /* Scale down the size of the social icons when the sidebar gets small */
 @media (max-width: 1000px) {
-    p.social i {
+    p.social i.fa-3x {
 	font-size: 2.5em;
     }
 }
 
 @media (max-width: 900px) {
-    p.social i {
+    p.social i.fa-3x {
 	font-size: 2.2em;
     }
 }
@@ -567,7 +567,25 @@ blockquote.highlights {
     background-color: #F99;
 }
 
-/* Small images, titles... in previews */
+div.warning {
+    color: white;
+    background: #DD514C;
+    border: 1px solid #ECA49A;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+div.warning a {
+    color: white;
+    text-decoration: underline;
+}
+
+div.warning a:hover {
+    color: #F6CEC8;
+}
+
+/*---- Titles, preview ... -----------------------------------------------*/
 .post-header img {
     max-width: 100px ;
     max-height: 150px ;
@@ -582,3 +600,95 @@ header.post-header {
     clear: both;
 }
 
+/*---- For the static pages (eg the about page )--------------------------*/
+div.content h1.title {
+    display: none;
+}
+
+div.page h1.content-subhead {
+    color: #2E3F56;
+}
+
+div.contact {
+    padding-left: 1.1em;
+    display: inline-block;
+    margin-left: .2em;
+    margin-right: 4em;
+}
+
+.contact i.fa {
+    margin-left: -1.3em;
+}
+
+.content .social a {
+    color: #2E3F56;
+    white-space: nowrap;
+}
+
+.content .social {
+    line-height: 200%;
+    text-align: center;
+}
+
+.content .social a:hover {
+    color: #000;
+}
+
+/* Styling the lists */
+ul.gray {
+    list-style: none;
+    padding-left: 1em;
+}
+
+ul.gray li:before {
+    content: "";
+    line-height: 1em;
+    width: .5em;
+    height: .5em;
+    background-color: #EEE;
+    float: left;
+    margin: .5em .25em 0 -.75em;
+}
+
+@media (min-width: 1340px) {
+ul.columns li {
+    display: inline-block;
+    width: 24.5em;
+    vertical-align: text-top;
+}
+}
+
+/* Expandable information */
+.expandable {
+    margin: 6px 2em 2px 0em;
+}
+
+.expandable div.box { 
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid #ABC;
+    border-radius: 5px;
+}
+
+.expandable input[type=checkbox] {
+    display: none;
+}
+
+.expandable input[type=checkbox] ~ div { 
+    max-height: 0;
+    max-width: 0;
+    opacity: 0;
+    overflow: hidden;
+    white-space:nowrap;
+   -webkit-transition:all 1s ease;  
+   -moz-transition:all 1s ease;  
+   -o-transition:all 1s ease;  
+   transition:all 1s ease;
+}
+
+.expandable input[type=checkbox]:checked ~ div { 
+    max-height: 100%;
+    max-width: 100%;
+    opacity: 1;
+    white-space: normal;
+}
