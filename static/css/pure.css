@@ -183,8 +183,12 @@ hr {
 
 .social {
     display: inline-block;
-    margin-top: 5px;
 }
+
+.page .social {
+    margin-top: 10px;
+}
+
 .social a {
     text-decoration: none;
     margin-left: 15px;
@@ -484,8 +488,12 @@ div.content img {
 
 div.content img.align-center {
     display: block;
+}
+
+.align-center {
     margin-right: auto;
     margin-left: auto;
+    text-align: center;
 }
 
 div.content img.align-right {
@@ -600,7 +608,21 @@ header.post-header {
     clear: both;
 }
 
+div.content h3 {
+    font-size: 1.1em;
+    color: #2E3F56;
+}
+
+div.content h4 {
+    display: inline;
+    margin: 0px;
+}
+
 /*---- For the static pages (eg the about page )--------------------------*/
+iframe {
+    border: none;
+}
+
 div.content h1.title {
     display: none;
 }
@@ -634,6 +656,76 @@ div.contact {
     color: #000;
 }
 
+#scholarometerWidgetBottom {
+    display: none;
+}
+
+iframe names {
+    display: none;
+}
+
+iframe narticles:before {
+    content: "Articles: ";
+}
+
+iframe ncitations:before {
+    content: "Citations: ";
+}
+
+iframe impact:before {
+    content: "h-index: ";
+}
+
+iframe impact g {
+    display: none;
+}
+
+iframe impact h_m {
+    display: none;
+}
+
+iframe impact h_s {
+    display: none;
+}
+
+iframe impact scholarometer_perentile {
+    display: none;
+}
+
+.light-gray {
+    color: #666;
+    font-size: 90%;
+}
+
+.light {
+    font-size: 90%;
+}
+
+div.three-cols {
+    width: 33.3%;
+}
+
+div.three-cols h3{
+    text-align: center;
+}
+
+/*@media ((min-width: 550px) and (max-width: 767px)) {*/
+@media (max-width: 1000px) {
+    div.three-cols {
+	width: 100%;
+    }
+
+    div.three-cols h3{
+	text-align: left;
+    }
+}
+
+@media (max-width: 1000px) {
+    .large-screen {
+	display: none
+    }
+}
+
 /* Styling the lists */
 ul.gray {
     list-style: none;
@@ -663,7 +755,7 @@ ul.columns li {
     margin: 6px 2em 2px 0em;
 }
 
-.expandable div.box { 
+div.box { 
     margin: 10px;
     padding: 5px;
     border: 1px solid #ABC;
@@ -679,11 +771,11 @@ ul.columns li {
     max-width: 0;
     opacity: 0;
     overflow: hidden;
-    white-space:nowrap;
-   -webkit-transition:all 1s ease;  
-   -moz-transition:all 1s ease;  
-   -o-transition:all 1s ease;  
-   transition:all 1s ease;
+    white-space: nowrap;
+   -webkit-transition:all .5s ease;  
+   -moz-transition:all .5s ease;  
+   -o-transition:all .5s ease;  
+   transition:all .5s ease;
 }
 
 .expandable input[type=checkbox]:checked ~ div { 
