@@ -1,0 +1,47 @@
+.ChampRes {
+    display: none;
+}
+
+.Rubrique {
+    display: none;
+}
+
+.NoticeRs {
+    margin: 0 0 8px;
+}
+
+body {
+    overflow: hidden;
+}
+
+body:hover {
+    overflow-y: scroll;
+}
+
+.LienBibtexACoteFulltext {
+    display: none
+}
+
+.ValeurRes {
+    display: inline;
+    margin-left: 0px;
+}
+
+.Titre {
+    color: #333332;
+    font-family: sans-serif;
+    font-size: 17px;
+    font-weight: normal;
+}
+
+.ValeurRes a {
+    color: #333332;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+.ValeurRes a:hover {
+    text-decoration: underline;
+}
+
+

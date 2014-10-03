@@ -7,6 +7,9 @@
         <div class="content">
             <!-- A wrapper for all the blog posts -->
             <div class="posts">
+		{% if not articles_page.has_previous() %}
+		    {% include 'front_page.html' %}
+		{% endif %}
                 <h1 class="content-subhead">
                     {% block pagetitle %}
                         {% if not articles_page.has_previous() %}

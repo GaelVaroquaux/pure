@@ -1,0 +1,31 @@
+.ChampRes {
+    display: none;
+}
+
+.ValeurRes {
+    display: inline;
+    margin-left: 0px;
+}
+
+
+.Rubrique {
+    color: #2E3F56;
+}
+
+.Titre {
+    color: #333332;
+    font-family: sans-serif;
+    font-size: 17px;
+}
+
+.ValeurRes a {
+    color: #333332;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+.ValeurRes a:hover {
+    text-decoration: underline;
+}
+
+

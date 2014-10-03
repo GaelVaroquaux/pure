@@ -488,6 +488,8 @@ div.content img {
 
 div.content img.align-center {
     display: block;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .align-center {
@@ -697,6 +699,11 @@ iframe impact scholarometer_perentile {
     font-size: 90%;
 }
 
+.light-gray a {
+    color: #666;
+    font-weight: 700;
+}
+
 .light {
     font-size: 90%;
 }
@@ -717,6 +724,14 @@ div.three-cols h3{
 
     div.three-cols h3{
 	text-align: left;
+    }
+
+    div.one_of_two {
+	width: 100%;
+    }
+
+    div.two_of_two {
+	display: none;
     }
 }
 
