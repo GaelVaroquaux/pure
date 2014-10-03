@@ -10,10 +10,11 @@
         <div class="cover-body">
             <header class="header">
                 <hgroup>
+		    <div style="display: inline-block">
 		    <a class="brand-main" href="/" tooltip="Main page">
                     <h1 class="brand-main">{{ SITENAME }}</h1>
                     <p class="tagline">{{ TAGLINE }}</p>
-		    </a>
+		    </a></div>
                 {% for title, link in MENUITEMS %}
                     <p class="links"><a href="{{ SITEURL }}/{{ link }}">{{ title }}</a></p>
                 {% endfor %}

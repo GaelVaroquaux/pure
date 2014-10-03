@@ -7,7 +7,6 @@
     margin-left: 0px;
 }
 
-
 .Rubrique {
     color: #2E3F56;
 }
@@ -15,7 +14,7 @@
 .Titre {
     color: #333332;
     font-family: sans-serif;
-    font-size: 17px;
+    font-size: 110%px;
 }
 
 .ValeurRes a {

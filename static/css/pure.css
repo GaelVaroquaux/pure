@@ -278,7 +278,7 @@ p.links {
     text-decoration: none;
     color: #fff;
     border-radius: 5px;
-    width: 155px;
+    min-width: 160px;
     display: inline-block;
 }
 
@@ -745,6 +745,16 @@ iframe impact scholarometer_perentile {
 
 .light {
     font-size: 90%;
+}
+
+.hoverable {
+    border: 1px solid #FFF;
+    border-radius: 3px;
+}
+
+.hoverable:hover {
+    background-color: #EEE;
+    border: 1px solid #ABC;
 }
 
 div.three-cols {
