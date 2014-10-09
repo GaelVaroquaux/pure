@@ -263,6 +263,18 @@ div.tooltip-below[tooltip]:hover:before{
     margin-left: -60px; /* .5*width + padding */
 }
 
+.content-subhead *[tooltip] {
+    float: right;
+}
+
+.content-subhead *[tooltip]:hover:before {
+    left: initial;
+    right: 120%;
+    bottom: -.05em;
+    width: initial;
+    text-transform: initial;
+}
+
 p.links {
     clear: both;
     margin: 6px 0px;
