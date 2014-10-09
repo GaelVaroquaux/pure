@@ -39,6 +39,7 @@
                             under {% for tag in article.tags %}
                                 <a class="post-category" href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
                             {% endfor %}
+			    {% include 'social_links.html' %}
                         </p>
                 </header>
             </section>

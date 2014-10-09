@@ -209,6 +209,10 @@ a.brand-main {
     color: #fff;
 }
 
+iframe#twitter-widget-0 {
+    float: right;
+}
+
 /* Scale down the size of the social icons when the sidebar gets small */
 @media (max-width: 1000px) {
     p.social i.fa-3x {
