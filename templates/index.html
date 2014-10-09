@@ -8,19 +8,21 @@
 	<h1 class="content-subhead">Latest papers</h1>
 <iframe width="100%" height=350 src="http://haltools.inria.fr/Public/afficheRequetePubli.php?auteur_exp=gael%2Cvaroquaux&NbAffiche=7&CB_titre=oui&langue=Anglais&tri_exp=annee_publi&tri_exp2=date_publi&tri_exp3=typdoc&ordre_aff=TA&Fen=Aff&css=http://gael-varoquaux.info/theme/css/haltools.css"></iframe>
 	<div class="expandable" style="margin: 0px 0px 0px 8px;">
-	    <input type="checkbox" id="cb1"/>
-	    <label for="cb1" class="light-gray hoverable">
+	    <input type="checkbox" id="more1"/>
+	    <label for="more1" class="light-gray hoverable">
 		    <strong>More...</strong>
 	    </label>
 	    <div>
-		<p class="light-gray">
-		See 
+		<ul class="gray light-gray">
+		<li> 
 		<a href="publications.html">
-		    my publications page</a>
-		and
+		    My publications page</a>
+		and my
 		<a href="http://scholar.google.fr/citations?user=OGGu384AAAAJ">
-		Google scholar</a>
-		</p>
+		Google scholar</a> page</li>
+		<li><a href="http://www.slideshare.net/GaelVaroquaux">Slides
+		on slideshare</a></li>
+		</ul>
 	    </div>
 	</div>
      </div>
@@ -33,3 +35,18 @@
 </div>
     {% endif %}
 {% endblock %}
+
+{% block belowtitle %}
+  {% if not articles_page.has_previous() %}
+    <p class="post-meta category-list">
+    {% for category, articles in categories %}
+	<a href="{{ SITEURL }}/{{ category.url }}"
+	 class="post-category">{{ category }}</a>
+    {% endfor %}
+    </p>
+  {% endif %}
+{% endblock belowtitle %}
+
+{% block feedlink %}
+    <a href="feeds/all.atom.xml"><i class="fa fa-rss"></i></a>
+{% endblock feedlink %}

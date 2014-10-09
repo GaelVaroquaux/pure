@@ -327,6 +327,10 @@ p.links {
     font-size: 90%;
 }
 
+.category-list {
+    margin-top: 1em;
+}
+
 .archive-item {
     padding: 10px 0;
     border-bottom: 1px solid #f2f2f0;
@@ -554,6 +558,17 @@ div.align-left {
     float: left;
 }
 
+div.formula {
+    margin-left: 2em;
+}
+
+p.caption {
+    text-align: left;
+    font-size: 90%;
+    font-style: italic;
+    margin-left: 2em;
+}
+
 div.topic, div.admonition, div.note {
     border-width : 0 0 1px 0 ;
     border-style: solid ;
@@ -573,6 +588,45 @@ div.topic p.topic-title {
     border-style: solid;
     margin: 0 0 2px 0 ;
     border-color: #777;
+}
+
+@media (min-width: 1400px) and (min-height: 700px) {
+    div.contents {
+	position: fixed;
+	left: 0px;
+	top: 400px;
+	width: 380px;
+	white-space: nowrap;
+	margin-left: 5px;
+	border-width: 0px;
+    }
+
+    div.contents li {
+	overflow: hidden;
+	text-overflow: ellipsis;
+    }
+
+    div.contents ul {
+	list-style-type: none;
+	padding: 0 0 0 20px;
+	margin-top: 5px;
+	text-overflow: ellipsis;
+    }
+
+    div.contents p.topic-title {
+	border-width: 0px;
+    }
+
+    div.contents a {
+	color: #555;
+	/*color: #2E3F56;*/
+    }
+
+    .post-header div.contents {
+	width: 100%;
+	position: relative;
+	top: inherit;
+    }
 }
 
 p.admonition-title {
@@ -659,6 +713,10 @@ div.content h4 {
     margin: 0px;
 }
 
+div.content a.toc-backref {
+    color: #2E3F56;
+}
+
 /*---- For the static pages (eg the about page )--------------------------*/
 iframe {
     border: none;
@@ -670,6 +728,19 @@ div.content h1.title {
 
 div.page h1.content-subhead {
     color: #2E3F56;
+}
+
+h1.content-subhead i.fa-rss {
+    float: right;
+    font-size: 1.8em;
+}
+
+h1.content-subhead a {
+    color: inherit;
+}
+
+h1.content-subhead a:hover {
+    color: #333332;
 }
 
 div.contact {
@@ -752,9 +823,19 @@ iframe impact scholarometer_perentile {
     border-radius: 3px;
 }
 
+label.hoverable {
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+}
+
 .hoverable:hover {
     background-color: #EEE;
     border: 1px solid #ABC;
+}
+
+.expandable input[type=checkbox]:checked ~ label.hoverable { 
+    color: #EEE;
 }
 
 div.three-cols {

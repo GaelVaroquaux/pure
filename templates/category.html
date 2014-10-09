@@ -1,3 +1,7 @@
-{% extends 'index.html' %}
+{% extends 'listing.html' %}
 {% block title %}{{ category|striptags }} category // {{ super() }}{% endblock title %}
 {% block pagetitle %}Posts in '{{ category }}'{% endblock pagetitle %}
+
+{% block feedlink %}
+    <a href="../feeds/{{ category }}.atom.xml"><i class="fa fa-rss"></i></a>
+{% endblock feedlink %}

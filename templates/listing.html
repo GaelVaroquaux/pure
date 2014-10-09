@@ -20,7 +20,11 @@
                     {% if articles_page.has_previous() %}
                         &ndash; Page&nbsp;{{ articles_page.number }}
                     {% endif %}
+                    {% block feedlink %}
+                    {% endblock feedlink %}
                 </h1>
+		{% block belowtitle %}
+		{% endblock belowtitle %}
                 {% for article in articles_page.object_list %}
                     {% include 'post.html' %}
                     {% if MATH is defined and not MATH['auto_insert'] %}
