@@ -209,8 +209,10 @@ a.brand-main {
     color: #fff;
 }
 
-iframe#twitter-widget-0 {
+span.social_links {
     float: right;
+    margin-top: .5em;
+    margin-right: -2em;
 }
 
 /* Scale down the size of the social icons when the sidebar gets small */
@@ -336,7 +338,7 @@ p.links {
 }
 
 .post-category {
-    margin: 0 0.1em;
+    margin: 0 0.1em 0.1em;
     padding: 0.2em 0.6em;
     color: #fff;
     background: #999;
