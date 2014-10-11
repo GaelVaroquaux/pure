@@ -22,7 +22,7 @@
                 <a href="{{ SITEURL }}">
 		    <img class="avatar" alt="Gaël Varoquaux" src="http://gael-varoquaux.info/images/gael.png">
                 </a>
-                <a href="{{ SITEURL }}">
+                <a href="{{ SITEURL }}" class="article-info">
 		    <h2 class="article-info">{{ article.author }}</h2>
 		</a>
                 <p>{{ article.locale_date }}</p>
@@ -44,7 +44,8 @@
                 </header>
             </section>
             {{ article.content }}
-            <div class="hr"></div>
+            <div class="hr" style="margin-bottom: -.5em;"></div>
+	    {% include 'social_links.html' %}
             <a href="#" class="go-top">Go Top</a>
             {% if DISQUS_SITENAME %}
                 {% include 'disqus.html' %}

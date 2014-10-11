@@ -119,6 +119,10 @@ h1.brand-main {
     word-wrap: break-word;
 }
 
+a.article-info {
+    color: #333332;
+}
+
 .article-avatar {
     width: 120px;
     height: 120px;
@@ -542,6 +546,11 @@ p.links {
 }
 
 /*---- Page elements for restructured text--------------------------------*/
+
+div.content a.external { /* break long URLs */
+    word-wrap: break-word; /* non standard webkit support */
+    word-wrap: break-all;
+}
 
 div.content img {
     margin-left: 5%;
