@@ -206,6 +206,7 @@ a.brand-main {
     margin-top: 10px;
 }
 
+
 .social a {
     text-decoration: none;
     margin-left: 15px;
@@ -353,6 +354,11 @@ a.post-link {
     color: #fff;
     background: #999;
     font-size: 90%;
+}
+
+a.post-category:hover {
+    text-decoration: none;
+    background: #333332;
 }
 
 .category-list {
@@ -795,6 +801,8 @@ div.contact {
 .content .social a {
     color: #2E3F56;
     white-space: nowrap;
+    margin-left: 5px;
+    display: inline-block;
 }
 
 .content .social {
