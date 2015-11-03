@@ -31,6 +31,13 @@ pre {
     box-shadow: 2px 2px 2px #888;
 }
 
+pre.literal-block {
+    box-shadow: none;
+    background-color: #F1F6FB;
+    border: solid #B8BEC3;
+    border-width: 0 0 0 7px;
+}
+
 .sidebar {
     position: fixed;
     top: 0;
@@ -56,13 +63,13 @@ pre {
     box-shadow: inset -1px 0 0 rgba(0,0,0,0.3);
 }
 
-@media (min-width: 767px) {
+@media (min-width: 860px) {
     div.sidebar div.cover-img {
 	background-position-x: right;
     }
 
     .header-article {
-	padding-top: 4em;
+	padding-top: .7em;
     }
 }
 
@@ -109,6 +116,62 @@ h1.brand-main {
     margin-left: 15px;
     /* Shifts a bit the shadow down */
     margin-top: -1em;
+}
+
+
+div.main-title {
+    margin: 8pt 0pt -17pt 2.5em;
+}
+
+@media (max-width: 767px) {
+    div.main-title {
+	display: none;
+    }
+}
+
+span.main-title {
+    font-size: 125%;
+    font-weight: bold;
+}
+
+div.main-title a {
+    color: #555;
+    padding: .5em;
+    border-radius: 5px;
+}
+
+div.main-title a:hover {
+    color: black;
+    background-color: #DDD;
+    text-decoration: none;
+}
+
+div.main-title:hover:after{
+    background: rgba(0,0,0,.8);
+    border-radius: 5px;
+    color: white;
+    content: "\2B95\0020 More about me: professional information";
+    padding: 7px 15px;
+    z-index: 98;
+    display: inline-block;
+    text-align: center;
+    margin-right: -100%; 
+    margin-top: -10px; 
+    margin-bottom: -10px; 
+    margin-left: 4px;
+    position: relative;
+}
+
+@media (max-width: 1200px) {
+    div.main-title:hover:after{
+	content: "&rarr; About me";
+    }
+}
+
+span.main-subtitle {
+    font-weight: bold;
+    padding-left: 5em;
+    color: #666;
 }
 
 .article-info {
@@ -218,6 +281,7 @@ span.social_links {
     float: right;
     margin-top: .5em;
     margin-right: -2em;
+    clear: right;
 }
 
 /* Scale down the size of the social icons when the sidebar gets small */
@@ -328,7 +392,8 @@ p.links {
 }
 
 .post {
-    padding-bottom: 1em;
+    padding-bottom: .1em;
+    padding-top: .9em;
     border-bottom: 1px solid #f2f2f0;
 }
 .post-title {
@@ -344,8 +409,13 @@ p.links {
 
 a.post-link {
     display: inline-block;
-    right: 2em;
-    position: absolute;
+    float: right;
+    color:  #959595;
+}
+
+a.post-link:hover {
+    text-decoration: none;
+    color: #3535C3;
 }
 
 .post-category {
@@ -362,7 +432,8 @@ a.post-category:hover {
 }
 
 .category-list {
-    margin-top: 1em;
+    margin-top: -.2em;
+    margin-bottom: .1em;
 }
 
 .archive-item {
@@ -403,6 +474,7 @@ a.post-category:hover {
 .footer .pure-menu a:focus {
     background: none;
 }
+
 
 .pagination-wrapper {
     padding-top: 6px;
@@ -629,6 +701,47 @@ div.topic p.topic-title {
     border-color: #777;
 }
 
+div.note.align-right {
+    font-weight: 800;
+    font-style: oblique;
+    padding: .1ex .1ex 0.5ex 5ex;
+    margin: 2px 1ex 2px 1ex;
+    background-color: white;
+    border: none;
+    width: 300px;
+    font-size: larger ;
+}
+
+div.note.align-right p.first.admonition-title {
+    display: none;
+}
+
+div.note.align-right p {
+    border: none;
+}
+
+div.content div.sidebar {
+    position: relative;
+    float: right;
+    background-color: #F4F4F4;
+    margin-left: 0pt;
+    padding-left: 1ex;
+    margin-top: .5em;
+}
+
+div.sidebar p.first {
+    margin-top: .5em;
+    font-weight: bold;
+}
+
+@media (max-width: 900px) {
+    div.note.align-right {
+	/*float: center;*/
+	width: 50%;
+	padding: .1ex 0ex 0.5ex 2ex;
+    }
+}
+
 @media (min-width: 1400px) and (min-height: 700px) {
     div.contents {
 	position: fixed;
@@ -680,6 +793,22 @@ div.note p.admonition-title {
     font-size: xx-small;
 }
 
+div.warning p.admonition-title {
+    display: none;
+}
+
+div.warning p {
+    margin: .5em 0pt;
+}
+
+div.warning p.last {
+    margin-bottom: 5px;
+}
+
+div.warning p:nth-child(2) {
+    margin-top: 4px; 
+}
+
 blockquote.epigraph {
 /*    font-size: smaller ;*/
     font-family: sans-serif ;
@@ -704,6 +833,26 @@ blockquote.highlights {
     padding : 0 0 0 1ex ;
 }
 
+@media (min-width: 900px) {
+    div.figure.align-right {
+	max-width: 50%;
+    }
+
+    div.figure.align-right img {
+	width: 100%;
+    }
+}
+
+div.figure p.caption {
+    margin-top: 0px;
+}
+
+@media (max-width: 700px) {
+    div.figure.align-right {
+	float: center;
+    }
+}
+
 /* docutils errors */
 .system-message {
     background-color: #F99;
@@ -725,6 +874,15 @@ div.warning a {
 
 div.warning a:hover {
     color: #F6CEC8;
+}
+
+table.footnote {
+    font-size: smaller;
+    margin-bottom: 1em;
+}
+
+p.small {
+    font-size: smaller;
 }
 
 /*---- Titles, preview ... -----------------------------------------------*/
@@ -757,8 +915,28 @@ div.content h4 {
     margin: 0px;
 }
 
+div.content h1, div.content h2, div.content h3 div.content h4 {
+    clear: both;
+}
+
 div.content a.toc-backref {
     color: #2E3F56;
+}
+
+ul.columns.simple li {
+    float: left;
+    min-width: 200px;
+    width: 30%;
+    margin-right: 1.25em;
+}
+
+ul.columns.simple:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
 }
 
 /*---- For the static pages (eg the about page )--------------------------*/

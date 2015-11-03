@@ -1,5 +1,13 @@
 {% extends 'listing.html' %}
 
+{% block maintitle %}
+<div class="main-title">
+    <a href="about.html">
+    <span class="main-title">Gaël Varoquaux</span>
+    <span class="main-subtitle">computer / data / brain science</span></a>
+</div>
+{% endblock maintitle %}
+
 {% block pagehead %}
     {% if not articles_page.has_previous() %}
 <div>
@@ -27,7 +35,7 @@
 	</div>
      </div>
      <div class="pure-u-1-2 two_of_two" style="height: 450px;">
-	<h1 class="content-subhead">Latest tweets</h1>
+	<h1 class="content-subhead" style="margin-bottom: 0pt;">Latest tweets</h1>
           <a class="twitter-timeline" data-chrome="nofooter noborders noscrollbar" width="100%" height="400" data-dnt="true" href="https://twitter.com/GaelVaroquaux" data-widget-id="517767457646198784">Tweets by @GaelVaroquaux</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
      </div>
@@ -50,3 +58,4 @@
 {% block feedlink %}
     <a href="feeds/all.atom.xml" tooltip="Feed"><i class="fa fa-rss"></i></a>
 {% endblock feedlink %}
+
