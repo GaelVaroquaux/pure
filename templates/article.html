@@ -17,7 +17,8 @@ src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></scr
         <header class="header-article">
             <hgroup>
                 <a href="{{ SITEURL }}">
-		    <img class="avatar" alt="Gaël Varoquaux" src="http://gael-varoquaux.info/images/gael.png">
+		    <img class="avatar" alt="Gaël Varoquaux" 
+                     src="{{ article.profile_image }}">
                 </a>
                 <a href="{{ SITEURL }}" class="article-info">
 		    <h2 class="article-info">{{ article.author }}</h2>
