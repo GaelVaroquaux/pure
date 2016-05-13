@@ -46,6 +46,10 @@ pre.literal-block {
     margin-left: -25%;
 }
 
+.sidebar.small {
+    font-size: smaller;
+}
+
 .cover-img {
     position: absolute;
     width: 100%;
@@ -138,6 +142,7 @@ div.main-title a {
     color: #555;
     padding: .5em;
     border-radius: 5px;
+    transition-duration: .5s;
 }
 
 div.main-title a:hover {
@@ -529,7 +534,6 @@ a.post-category:hover {
         width: 100%;
         position: relative;
         margin: 0;
-        height: 325px;
     }
     .sidebar.sidebar-article {
         height: auto;
@@ -701,7 +705,7 @@ div.topic p.topic-title {
     border-color: #777;
 }
 
-div.note.align-right {
+div.note.align-right, div.container.align-right {
     font-weight: 800;
     font-style: oblique;
     padding: .1ex .1ex 0.5ex 5ex;
@@ -716,8 +720,14 @@ div.note.align-right p.first.admonition-title {
     display: none;
 }
 
-div.note.align-right p {
+div.note.align-right p, div.container.align-right p {
     border: none;
+}
+
+div.content div.grey {
+    background-color: #F4F4F4;
+    margin: 1ex;
+    padding: 1ex 2ex .7ex 2ex;
 }
 
 div.content div.sidebar {
@@ -810,7 +820,7 @@ div.warning p:nth-child(2) {
 }
 
 blockquote.epigraph {
-/*    font-size: smaller ;*/
+    /*font-size: medium ;*/
     font-family: sans-serif ;
     font-weight : 500 ;
     font-style: oblique;
@@ -823,6 +833,13 @@ blockquote.epigraph {
     background-repeat: no-repeat;
     /*background-position:  right;*/
 }
+
+blockquote.epigraph.align-right {
+    width: 40%;
+    float: right;
+    margin-bottom: 1ex;
+}
+
 
 blockquote.highlights {
     font-size: smaller ;
@@ -879,6 +896,11 @@ div.warning a:hover {
 table.footnote {
     font-size: smaller;
     margin-bottom: 1em;
+    color: #555;
+}
+
+table.footnote a {
+    color: #3960C4;
 }
 
 p.small {
@@ -908,6 +930,12 @@ header.post-header {
 div.content h3 {
     font-size: 1.1em;
     color: #2E3F56;
+    margin-bottom: .5ex;
+}
+
+/* Make the paragraph after an h3 closer to this h3 */
+div.content h3+p {
+    margin-top: .5ex;
 }
 
 div.content h4 {
@@ -1096,6 +1124,14 @@ div.three-cols h3{
 }
 
 /* Styling the lists */
+div.content p+ul {
+    margin-top: -1ex;
+}
+
+div.content p.first+ul {
+    margin-top: 1ex;
+}
+
 ul.gray {
     list-style: none;
     padding-left: 1em;

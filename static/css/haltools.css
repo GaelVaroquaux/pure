@@ -6,8 +6,8 @@
     display: none;
 }
 
-.NoticeRs {
-    margin: 0 0 8px;
+.NoticeRes {
+    margin: 0 0 10px;
     padding-bottom: .3em;
 }
 
@@ -16,7 +16,7 @@ body {
 }
 
 body:hover {
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .LienBibtexACoteFulltext {
