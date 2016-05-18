@@ -644,6 +644,10 @@ div.content img {
     margin-left: 5%;
 }
 
+div.content img.large {
+    margin-left: 0pt;
+}
+
 div.content img.align-center {
     display: block;
     margin-right: auto;
@@ -694,6 +698,11 @@ div.topic, div.admonition, div.note {
 div.topic p {
     margin: 1px 1em 1px 1em ;
     font-size: smaller ;
+}
+
+div.topic ul {
+    font-size: smaller ;
+    padding-top: 1ex;
 }
 
 div.topic p.topic-title {
