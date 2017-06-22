@@ -19,10 +19,12 @@
                     <p class="links"><a href="{{ SITEURL }}/{{ link }}">{{ title }}</a></p>
                 {% endfor %}
                     <p class="social">
-                {% for title, image, link in SOCIAL %}
+                {% for title, image, link, extra in SOCIAL %}
+			<div class=social>
                         <a href="{{ link }}" tooltip="{{ title }}">
                             <i class="fa fa-{{ image }} fa-3x"></i>
-                        </a>
+                        </a>{{ extra }}
+			</div>
                 {% endfor %}
                     <p>
                 </hgroup>
