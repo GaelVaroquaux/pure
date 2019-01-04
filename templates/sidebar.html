@@ -1,5 +1,7 @@
 <div class="sidebar pure-u">
-    <div class="cover-img" style="background-image: url('{{ COVER_IMG_URL }}')">
+    <!-- The background-image is now set in the CSS, to facilitate
+         override -->
+    <div class="cover-img">
         <div class="cover-profile tooltip-below" tooltip="About me">
 	    <div class="round-border"> 
 		<a href="{{ SITEURL }}/about.html">
@@ -15,9 +17,11 @@
                     <h1 class="brand-main">{{ SITENAME }}</h1>
                     <p class="tagline">{{ TAGLINE }}</p>
 		    </a></div>
+		<span class="links">
                 {% for title, link in MENUITEMS %}
                     <p class="links"><a href="{{ SITEURL }}/{{ link }}">{{ title }}</a></p>
                 {% endfor %}
+		</span>
                     <p class="social">
                 {% for title, image, link, extra in SOCIAL %}
 			<div class=social>
