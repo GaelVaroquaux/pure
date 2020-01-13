@@ -1018,6 +1018,22 @@ div.figure.align-center p.caption {
     }
 }
 
+/* Side-caption figures */
+@media (min-width: 900px) {
+    .side-caption {
+	display: flex;
+	flex-direction: row-reverse;
+	margin-bottom: 3%;
+    }
+
+    div.figure.align-center.side-caption p.caption {
+	flex-grow: 1;
+	margin-top: 5%;
+	width: 0;
+    }
+
+}
+
 /* docutils errors */
 .system-message {
     background-color: #F99;
