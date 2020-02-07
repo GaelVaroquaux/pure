@@ -37,6 +37,11 @@ src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></scr
                             under {% for tag in article.tags %}
                                 <a class="post-category" href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
                             {% endfor %}
+		{% if article.readtime %}
+		    <span class="readtime">
+			&nbsp Read time: {{article.readtime.minutes}} min.
+		    </span>
+		{% endif %}
 			    {% include 'social_links.html' %}
                         </p>
                 </header>
