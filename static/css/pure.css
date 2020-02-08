@@ -1013,7 +1013,7 @@ div.figure.align-center p.caption {
     display: inline-block;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 600px) {
     div.figure.align-right {
 	float: center;
     }
