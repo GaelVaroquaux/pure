@@ -8,6 +8,21 @@
 </div>
 {% endblock maintitle %}
 
+{% block head_css %}
+    <style>
+	@media (min-width: 1560px) {
+		div.content {
+		    margin-left: 5em;
+		}
+	    }
+	@media (min-width: 1600px) {
+		div.two_of_two {
+		    margin: 0 -8ex 0 8ex;
+		}
+	    }
+    </style> 
+{% endblock %}
+
 {% block pagehead %}
     {% if not articles_page.has_previous() %}
 <div>
