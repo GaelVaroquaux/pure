@@ -819,6 +819,10 @@ div.topic p.topic-title {
     border-color: #777;
 }
 
+div.contents p.topic-title {
+    margin-bottom: .5ex ;
+}
+
 div.note.align-right, div.container.align-right {
     font-weight: 800;
     font-style: oblique;
@@ -1110,8 +1114,12 @@ div.content h4 {
     margin: 0px;
 }
 
-div.content h1, div.content h2, div.content h3 div.content h4 {
+div.content h1, div.content h2, div.content h3, div.content h4 {
     clear: both;
+}
+
+div.content div.line-block {
+    clear: right;
 }
 
 div.content a.toc-backref {
