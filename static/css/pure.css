@@ -171,7 +171,7 @@ div.main-title:hover:after{
     border-radius: 5px;
     color: white;
     content: "\2B95\0020 More about me: professional information";
-    padding: 7px 15px;
+    padding: 4px 15px;
     z-index: 98;
     display: inline-block;
     text-align: center;
