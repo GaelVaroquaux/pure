@@ -1336,6 +1336,7 @@ div.three-cols h3{
 
     div.one_of_two {
 	width: 100%;
+	overflow-x: hidden;
     }
 
     div.two_of_two {
