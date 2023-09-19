@@ -1436,6 +1436,10 @@ iframe.latest-papers {
     height: 340px;
 }
 
+iframe.feed {
+    height: 400px;
+}
+
 
 @media (min-width: 1900px) {
     div.indexhead {
