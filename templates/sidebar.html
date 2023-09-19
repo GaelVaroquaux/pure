@@ -23,10 +23,10 @@
                 {% endfor %}
 		</span>
                     <p class="social">
-                {% for title, image, link, extra in SOCIAL %}
+                {% for title, fa_class, link, extra in SOCIAL %}
 			<div class=social>
                         <a href="{{ link }}" tooltip="{{ title }}">
-                            <i class="fa fa-{{ image }} fa-3x"></i>
+                            <i class="{{ fa_class }} fa-3x"></i>
                         </a>{{ extra }}
 			</div>
                 {% endfor %}
