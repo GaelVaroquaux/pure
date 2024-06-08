@@ -139,18 +139,32 @@ h1.brand-main {
 
 
 div.main-title {
-    margin: 8pt 0pt -17pt 2.5em;
+    margin: 8pt 0pt 0pt 2.5em;
+    margin: calc(4pt + 1vh) 0pt calc(2vh - 17pt) 2.5em;
 }
 
 @media (max-width: 767px) {
-    div.main-title {
+    div.main-title span.main-title, div.main-title span.main-subtitle, div.main-title br {
 	display: none;
+    }
+
+    div.main-title: {
+	margin: 0px;
+    }
+
+    div.main-title:hover:after {
+	display: none !important;
     }
 }
 
 span.main-title {
     font-size: 125%;
     font-weight: bold;
+    padding-bottom: 1ex;
+}
+
+span.main-title-text {
+    display: inline-block;
 }
 
 div.main-title a {
@@ -158,6 +172,7 @@ div.main-title a {
     padding: .5em;
     border-radius: 5px;
     transition-duration: .5s;
+    display: inline-block;
 }
 
 div.main-title a:hover {
@@ -180,6 +195,11 @@ div.main-title:hover:after{
     margin-bottom: -10px; 
     margin-left: 4px;
     position: relative;
+    bottom: 1.5ex;
+}
+
+div.main-title br {
+    margin-bottom: 1ex;
 }
 
 @media (max-width: 1200px) {
@@ -773,6 +793,10 @@ div.content img.align-left {
     margin-left: 0%;
 }
 
+div.content table.noborder, div.content table.noborder tbody, div.content table.noborder tbody tr, div.content table.noborder tbody td  {
+    border: none;
+}
+
 div.align-right {
     float: right;
 }
@@ -947,6 +971,12 @@ div.sidebar p.first {
     }
 }
 
+@media (min-width: 1560px) {
+    div.layout div.content {
+	margin-left: calc(6vw - 1em);
+    }
+}
+
 p.admonition-title {
     border-width : 0 0 1px 0 ;
     border-style: solid;
@@ -1100,9 +1130,15 @@ p.small {
     font-size: large;
 }
 
+section.post header.post-header h3 {
+    font-size: 100%;
+}
+
 header.post-header {
     clear: both;
+    margin-bottom: 3vh;
 }
+
 
 div.content h3 {
     font-size: 1.1em;
@@ -1161,6 +1197,7 @@ ul.columns.simple:after {
 @media (min-width: 1750px) {
     table.footnote.side-hanging, div.content div.side-hanging {
 	width: 20em;
+	right: 2ex;
     }
 
 }
@@ -1168,6 +1205,7 @@ ul.columns.simple:after {
 @media (min-width: 1850px) {
     table.footnote.side-hanging, div.content div.side-hanging {
 	width: 25em;
+	right: calc(41vw - 90ex);
     }
 
 }
@@ -1284,6 +1322,10 @@ iframe impact scholarometer_perentile {
     font-weight: 700;
 }
 
+.light-gray.not-bold a {
+    font-weight: 500;
+}
+
 .light {
     font-size: 90%;
 }
@@ -1341,6 +1383,10 @@ div.three-cols h3{
 
     div.two_of_two {
 	display: none;
+    }
+
+    div.content iframe.latest-papers {
+	height: min(max(15ex, 40vh), 40ex);
     }
 }
 
@@ -1440,6 +1486,10 @@ iframe.feed {
     height: 400px;
 }
 
+div.indexhead {
+    padding-bottom: 1em;
+    margin-bottom: 3vh;
+}
 
 @media (min-width: 1900px) {
     div.indexhead {
@@ -1460,7 +1510,7 @@ iframe.feed {
 	height: 39vh;
     }
 
-    iframe#twitter-widget-0 {
+    iframe.feed {
 	height: 38vh !important;
     }
 
@@ -1474,7 +1524,7 @@ iframe.feed {
 
     div.main-title {
 	margin-top: 25pt;
-	margin-bottom: 15pt;
+	margin-bottom: calc(10pt + 2vh);
     }
 }
 
