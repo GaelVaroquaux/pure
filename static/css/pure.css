@@ -1512,8 +1512,12 @@ iframe.latest-papers {
     height: 340px;
 }
 
-iframe.feed {
+div.feed {
     height: 400px;
+    overflow: scroll;
+    transform-origin: top left;
+    transform: scale(.8);
+    width: 530px;
 }
 
 div.indexhead {
@@ -1540,8 +1544,10 @@ div.indexhead {
 	height: 39vh;
     }
 
-    iframe.feed {
-	height: 38vh !important;
+    div.feed {
+	height: 40vh !important;
+	margin-left: -30px;
+	width: 500px;
     }
 
     div.indexhead div.one_of_two {
