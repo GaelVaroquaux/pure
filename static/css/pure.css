@@ -885,7 +885,7 @@ div.note.align-right, div.container.align-right {
     font-style: oblique;
     padding: .1ex .1ex 0.5ex 5ex;
     margin: 2px 1ex 2px 1ex;
-    background-color: white;
+    background-color: transparent;
     border: none;
     width: 300px;
     font-size: larger ;
@@ -895,6 +895,13 @@ div.note.align-right, div.container.align-right {
     div.note.align-right, div.container.align-right {
 	max-width: 50%;
     }
+}
+
+@media (min-width: 1560px) {
+    div.note.align-right, div.container.align-right {
+	margin-right: -3em;
+    }
+
 }
 
 div.note.align-right p.first.admonition-title {
