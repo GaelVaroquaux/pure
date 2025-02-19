@@ -788,6 +788,15 @@ div.content img.align-right {
     float: right;
 }
 
+@media (max-width: 600px) {
+    div.content img.align-right {
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+    }
+}
+
 div.content img.align-left {
     float: left;
     margin-left: 0%;
@@ -958,6 +967,7 @@ div.sidebar p.first {
     margin-bottom: .5em;
     font-weight: bold;
 }
+
 
 @media (max-width: 900px) {
     div.note.align-right {
