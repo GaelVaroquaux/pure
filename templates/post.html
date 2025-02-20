@@ -2,7 +2,7 @@
     <a class="post-summary" href="{{ SITEURL }}/{{ article.url }}">
     <header class="post-header">
         <h3 class="post-title">{{ article.title }}</h3>
-            <p class="post-meta">{{ article.summary }}</p>
+            <p class="post-meta">{{ article.summary |replace("<a ", "<span ") |replace("</a>", "</span>")}}</p>
             <p class="post-meta" style="clear: both; margin-bottom: 0pt;">
                 {{ article.locale_date[4:] }}
             </p>
