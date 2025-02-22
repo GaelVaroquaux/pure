@@ -34,6 +34,28 @@
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     {% block head_js %}{% endblock %}
+    <!-- OpenGraph -->
+    {% if article is defined %}
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="{{ SITEURL }}/{{ article.url }}" />
+	<meta property="og:title" content="{{ article.title | replace("\"", "&quot;") }}" />
+	<meta property="og:description" content="{{ article.content | striptags | replace("\"", "&quot;") | truncate(196, False, '...') }}" />
+	<meta property="og:image" content="{{ article.content | findimage }}" />
+	<meta property="og:site_name" content="{{ SITENAME }}" />
+    {% elif page is defined %}
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="{{ SITEURL }}/{{ page.url }}" />
+	<meta property="og:title" content="{{ SITENAME }} - {{ page.title | replace("\"", "&quot;") }}" />
+	<meta property="og:description" content="{{ page.content | striptags | replace("\"", "&quot;") | truncate(196, False, '...') }}" />
+	<meta property="og:image" content="{{ page.content | findimage }}" />
+    {% else %}
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="{{ SITEURL }}/{{ output_file }}" />
+	<meta property="og:title" content="{{ SITENAME }}" />
+	<meta property="og:description" content="{{ TAGLINE }}" />
+	<meta property="og:image" content="{{ PROFILE_IMAGE_URL }}" />
+    {% endif %}
+    <meta property="og:logo" content="{{ PROFILE_IMAGE_URL }}" />
 </head>
 
 <body>

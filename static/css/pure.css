@@ -828,6 +828,10 @@ div.content img.align-left {
     margin-left: 0%;
 }
 
+div.content img.small {
+    max-width: 300px;
+}
+
 div.content table.noborder, div.content table.noborder tbody, div.content table.noborder tbody tr, div.content table.noborder tbody td {
     border: none;
 }
