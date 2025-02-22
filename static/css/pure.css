@@ -493,6 +493,20 @@ p.links {
     color: #333332;
 }
 
+@media (max-width: 600px) {
+    /* Less whitespace on the side of very narrow screens */
+    div.content {
+	padding-left: 1em;
+	padding-right: 1em;
+    }
+
+    /* For articles (not pages) a tiny bit more padding */
+    div.content > p, div.content > div.section > p {
+	padding-left: .2em;
+	padding-right: .2em;
+    }
+}
+
 .post {
     padding-bottom: .1em;
     padding-top: .9em;
@@ -504,6 +518,13 @@ div.posts header.post-header {
     padding-left: 1em;
     padding-right: 1em;
     cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    div.posts header.post-header {
+	padding-left: .4em;
+	padding-right: .4em;
+    }
 }
 
 div.posts header.post-header:hover {
@@ -691,7 +712,7 @@ a.post-category:hover {
 
     .content {
         padding: 1em 1.5em 0;
-        font-size: 85%;
+        font-size: 92%;
     }
 
     div.sidebar div.cover-img {
@@ -830,6 +851,14 @@ div.content img.align-left {
 
 div.content img.small {
     max-width: 300px;
+}
+
+section.post header.post-header img.small {
+    max-width: calc(min(300px, 33vw));
+    float: right;
+    display: inline;
+    margin-right: -3px;
+    margin-left: 3px;
 }
 
 div.content table.noborder, div.content table.noborder tbody, div.content table.noborder tbody tr, div.content table.noborder tbody td {
@@ -1224,6 +1253,10 @@ section.post header.post-header h3 {
 header.post-header {
     clear: both;
     margin-bottom: 3vh;
+}
+
+div.content h2 {
+    margin-top: 1.5em;
 }
 
 
