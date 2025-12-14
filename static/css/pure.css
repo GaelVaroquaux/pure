@@ -1240,6 +1240,7 @@ p.small {
 
 .post-header img:first-of-type {
     display: initial;
+    width: auto !important;
 }
 
 .post-header h2 {
